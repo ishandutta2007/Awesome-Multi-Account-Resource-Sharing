@@ -50,7 +50,7 @@ Below is a tabular overview of top commercial SaaS platforms providing multi-acc
 
 ## 🔓 Open-Source GitHub Projects
 
-Curated open-source control planes, IaC orchestrators, and governance engines. Sorted by GitHub Stars_Count (descending).
+Curated open-source control planes, IaC orchestrators, and governance engines. Sorted by GitHub_Stars_Count (descending).
 
 | Project 🌟 | Description 📝 | License 📜 | GitHub_Stars ⭐️ |
 | :--- | :--- | :--- | :--- |
