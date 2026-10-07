@@ -1,301 +1,110 @@
-# Awesome-Multi-Account-Resource-Sharing
-
-## Top Multi-Account Resource Sharing Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Cross-Account Access, Resource Sharing & Self-Hosted Multi-Cloud Governance*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial multi-account resource sharing platforms** and **open-source projects** that enable organizations to share resources, enforce policies, and manage access across multiple cloud accounts, projects, and subscriptions — from AWS Resource Access Manager to open-source Crossplane and Terraform-based governance.
-
-
-
-**Examples** include AWS Resource Access Manager, Azure Policy Guest Configuration, Google Cloud IAM Conditions, HashiCorp Consul Multi-Datacenter, Turbot Guardrails, Meshcloud, Spacelift, Crossplane, env0, and Scalr (the category leaders).
-
-
-
-**Open-source emphasis**: Multi-account resource sharing and governance is a strong open-source domain. **Crossplane** leads as the Kubernetes-native control plane for cloud resources, **Terragrunt** and **Terramate** orchestrate Terraform across accounts, **Atlantis** and **Digger** enable PR-based Terraform workflows, and **Open Policy Agent** enforces cross-account policies. **Cloud Custodian** handles governance rules, **CloudQuery** provides cross-account asset inventory, and **Steampipe** enables SQL-based multi-account querying. **Consul** provides multi-datacenter service discovery. This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[AWS Resource Access Manager](https://aws.amazon.com/ram/)**
-
-  **AWS's native resource sharing service** — share resources across AWS accounts and organizational units . **Supports VPC subnets, Transit Gateways, License Manager, Route 53 Resolver, and more** . **Best for AWS multi-account sharing** .
-
-
-
-- **[Azure Policy Guest Configuration](https://azure.microsoft.com/en-us/products/azure-policy/)**
-
-  **Azure's policy enforcement** — audit and configure settings across subscriptions . **Best for Azure multi-subscription governance** .
-
-
-
-- **[Google Cloud IAM Conditions](https://cloud.google.com/iam/docs/conditions-overview)**
-
-  **Google Cloud's conditional access** — attribute-based access control across projects . **Best for GCP multi-project sharing** .
-
-
-
-- **[HashiCorp Consul Multi-Datacenter](https://www.consul.io/)**
-
-  **Service discovery across datacenters** — see Open-Source section for the core project.
-
-
-
-- **[Turbot Guardrails](https://turbot.com/)**
-
-  **Cloud governance platform** — policy enforcement and resource sharing across accounts . **Best for enterprise multi-cloud governance** .
-
-
-
-- **[Meshcloud](https://meshcloud.io/)**
-
-  **Multi-cloud management platform** — self-service cloud accounts with governance . **Best for enterprise multi-cloud** .
-
-
-
-- **[Spacelift](https://spacelift.io/)**
-
-  **IaC orchestration platform** — Terraform, OpenTofu, Pulumi, CloudFormation, and Kubernetes . **Best for complex multi-IaC workflows** .
-
-
-
-- **[Crossplane (Upbound)](https://www.upbound.io/)**
-
-  **Managed Crossplane** — see Open-Source section for the core project.
-
-
-
-- **[env0](https://www.env0.com/)**
-
-  **IaC automation platform** — self-service environments with guardrails . **Best for developer self-service** .
-
-
-
-- **[Scalr](https://scalr.com/)**
-
-  **Terraform automation and collaboration** — policy enforcement and cost management . **Best for enterprise Terraform governance** .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Multi-Cloud Control Planes
-
-
-
-- **[Crossplane](https://github.com/crossplane/crossplane)**
-
-  **The leading Kubernetes-native cloud resource management platform**, Apache-2.0 licensed with **10,000+ GitHub stars** . **Extends Kubernetes API to manage cloud resources** — provision and share AWS, Azure, and GCP resources from Kubernetes . **Compositions for reusable infrastructure patterns** . **Provider families for AWS, Azure, GCP, and more** . **The de facto open-source multi-account resource sharing control plane** . **Best for platform teams building internal developer platforms** .
-
-
-
-- **[AWS Controllers for Kubernetes (ACK)](https://github.com/aws-controllers-kustomize/ack)**
-
-  **AWS-native Kubernetes controllers**, Apache-2.0 licensed . **Manage AWS resources from Kubernetes** — S3, RDS, EKS, and more . **Cross-account resource management via IRSA** . **Best for AWS-centric Kubernetes deployments** .
-
-
-
-- **[Azure Service Operator](https://github.com/Azure/azure-service-operator)**
-
-  **Azure-native Kubernetes controllers**, MIT licensed . **Manage Azure resources from Kubernetes** . **Best for Azure-centric Kubernetes deployments** .
-
-
-
-- **[GCP Config Connector](https://github.com/GoogleCloudPlatform/k8s-config-connector)**
-
-  **GCP-native Kubernetes controllers**, Apache-2.0 licensed . **Manage GCP resources from Kubernetes** . **Best for GCP-centric Kubernetes deployments** .
-
-
-
-### Infrastructure as Code Orchestration
-
-
-
-- **[Terragrunt](https://github.com/gruntwork-io/terragrunt)**
-
-  **Terraform wrapper for DRY configurations**, MIT licensed with **8,000+ GitHub stars** . **Orchestrates Terraform across accounts and environments** . **Keeps configurations DRY** . **Best for complex multi-account deployments** .
-
-
-
-- **[Terramate](https://github.com/terramate-io/terramate)**
-
-  **Orchestration and code generation for Terraform**, MPL-2.0 licensed . **Adds stacks, orchestration, and GitOps to Terraform** . **Best for scaling Terraform deployments** .
-
-
-
-- **[Atlantis](https://github.com/runatlantis/atlantis)**
-
-  **Terraform pull request automation**, Apache-2.0 licensed with **8,000+ GitHub stars** . **Collaborative IaC via pull requests** . **Plan and apply from PR comments** . **Best for Terraform collaboration** .
-
-
-
-- **[Digger](https://github.com/diggerhq/digger)**
-
-  **Open-source Terraform Cloud alternative**, MIT licensed . **CI/CD-native IaC orchestration** . **Best for Terraform in CI/CD** .
-
-
-
-- **[OpenTofu](https://github.com/opentofu/opentofu)**
-
-  **Open-source Terraform fork**, MPL-2.0 licensed with **25,000+ GitHub stars** . **Community-driven under Linux Foundation** . **Best for Terraform without BSL concerns** .
-
-
-
-- **[Pulumi](https://github.com/pulumi/pulumi)**
-
-  **IaC with real programming languages**, Apache-2.0 licensed with **22,000+ GitHub stars** . **TypeScript, Python, Go, .NET, Java** . **Best for developer-centric IaC** .
-
-
-
-### Policy & Governance
-
-
-
-- **[Open Policy Agent (OPA)](https://github.com/open-policy-agent/opa)**
-
-  **General-purpose policy engine**, Apache-2.0 licensed with **10,000+ GitHub stars** . **Unified policy enforcement across cloud, Kubernetes, and CI/CD** . **Best for cross-account policy enforcement** .
-
-
-
-- **[Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian)**
-
-  **Rules engine for cloud security and cost management**, Apache-2.0 licensed . **Policy-as-code for AWS, Azure, GCP** . **Best for multi-account governance** .
-
-
-
-- **[Kyverno](https://github.com/kyverno/kyverno)**
-
-  **Kubernetes-native policy management**, Apache-2.0 licensed with **6,000+ GitHub stars** . **Policy as Kubernetes resources** . **Best for Kubernetes policy** .
-
-
-
-- **[Gatekeeper](https://github.com/open-policy-agent/gatekeeper)**
-
-  **OPA-based Kubernetes policy controller**, Apache-2.0 licensed . **Policy enforcement for Kubernetes** . **Best for Kubernetes admission control** .
-
-
-
-### Multi-Account Visibility
-
-
-
-- **[CloudQuery](https://github.com/cloudquery/cloudquery)**
-
-  **Open-source cloud asset inventory**, MPL-2.0 licensed with **6,000+ GitHub stars** . **Extracts, transforms, and loads cloud configuration** across accounts . **SQL-queryable inventory** . **Best for multi-account asset visibility** .
-
-
-
-- **[Steampipe](https://github.com/turbot/steampipe)**
-
-  **Zero-ETL cloud API querying with SQL**, AGPL-3.0 licensed with **7,000+ GitHub stars** . **Query cloud resources with SQL** across accounts . **Best for multi-account resource exploration** .
-
-
-
-- **[Consul](https://github.com/hashicorp/consul)**
-
-  **Service discovery and service mesh**, MPL-2.0 licensed with **28,000+ GitHub stars** . **Multi-datacenter service discovery** . **Connect for mTLS** . **Best for multi-datacenter service discovery** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Terraform** — The IaC standard for multi-account provisioning .
-
-- **Ansible** — Configuration management across accounts .
-
-- **Pulumi** — IaC with programming languages .
-
-- **Crossplane** — Kubernetes-native cloud resources .
-
-- **OpenTofu** — Community Terraform fork .
-
-- **OPA** — Policy-as-code enforcement .
-
-- **Cloud Custodian** — Cloud governance rules .
-
-- **CloudQuery** — Cloud asset inventory .
-
-- **Steampipe** — SQL-based cloud querying .
-
-- **Consul** — Multi-datacenter service discovery .
-
-
-
-**Frameworks for building custom multi-account resource sharing solutions**: Combine **Crossplane** for Kubernetes-native multi-cloud resource management . Use **Terragrunt** or **Terramate** for Terraform orchestration across accounts . Deploy **Atlantis** or **Digger** for PR-based IaC workflows . Integrate **Open Policy Agent** for cross-account policy enforcement . Use **Cloud Custodian** for governance rules . Choose **CloudQuery** or **Steampipe** for multi-account asset visibility . Integrate **Consul** for multi-datacenter service discovery . Note that true enterprise multi-account governance with managed infrastructure, compliance certifications, and vendor-supported SLAs (Turbot, Spacelift, Scalr) remains primarily commercial territory; open-source stacks provide strong control planes, IaC orchestration, and policy enforcement foundations that require integration for complete multi-account governance.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Multi-account resource sharing platforms manage access to critical cloud resources and infrastructure. Self-hosted solutions require proper security hardening, access controls, and compliance with data privacy regulations.
-
-- **Cross-account access requires careful IAM configuration** — misconfigured trust relationships can expose resources. Use least-privilege principles and audit regularly .
-
-- **State management is critical for IaC** — remote state backends (S3, GCS, Azure Blob) with locking are essential for team collaboration across accounts. Never commit state files to Git .
-
-- **License considerations**: Crossplane uses Apache-2.0, Terragrunt uses MIT, OpenTofu uses MPL-2.0, OPA uses Apache-2.0, and Consul uses MPL-2.0. Verify licensing against your use case before committing.
-
-- The open-source ecosystem provides strong control planes, IaC orchestration, and policy enforcement foundations, but **managed infrastructure, compliance certifications, and vendor-supported SLAs** remain primarily commercial offerings.
-
-
+# Awesome Multi-Account Resource Sharing 🌐 🚀
+
+![Awesome Multi-Account Resource Sharing Banner](assets/banner.svg)
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" />
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome" />
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+## 💡 Overview & Market Landscape
 
+A curated list of **SaaS platforms** and **open-source projects** for cross-account access, multi-cloud resource sharing, policy enforcement, and infrastructure governance.
 
-**Made for platform engineers, cloud architects, and organizations seeking multi-account governance sovereignty.**
+> 📊 **Market Size & Structure**: The Cloud Infrastructure Management & Governance Market is estimated at **$22.5 Billion** and is projected to reach **$58.2 Billion by 2030** (CAGR ~17.4%). The sector is **moderately fragmented**, featuring dominant hyper-scaler native services (AWS RAM, Azure Policy, GCP IAM) alongside rapidly growing multi-cloud orchestration and IaC platforms (Spacelift, HashiCorp, env0).
 
-Let's make multi-account resource sharing more open, transparent, and secure.
+---
+
+## 📋 Table of Contents 📑
+
+- [SaaS / Hosted Platforms](#-saas--hosted-platforms)
+- [Open-Source GitHub Projects](#-open-source-github-projects)
+- [How to Contribute](#-how-to-contribute)
+- [Star History](#-star-history)
+- [Support & Community](#-support--community)
+- [Disclaimer](#-disclaimer)
+
+---
+
+## 🏢 SaaS / Hosted Platforms
+
+Below is a tabular overview of top commercial SaaS platforms providing multi-account resource sharing, governance, and Infrastructure-as-Code (IaC) orchestration. Sorted by company size / market valuation (descending).
+
+| Platform 🚀 | Description 📝 | Company Size / Valuation 💰 | Pricing (Starting Tier) 💵 | Free Tier / Free Trial Limits 🎁 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Google Cloud IAM Conditions](https://cloud.google.com/iam/docs/conditions-overview)** | Attribute-based access control & project resource sharing across GCP | **~$4.25 Trillion** (Alphabet Market Cap) | Included with GCP resource usage | Free $300 credits for 90 days; IAM conditions available at no extra charge |
+| **[Microsoft Azure Policy](https://azure.microsoft.com/en-us/products/azure-policy/)** | Audit & policy enforcement across Azure multi-subscription environments | **~$3.90 Trillion** (Microsoft Market Cap) | Free for Azure native resources | 100% Free core service; $200 free credit for 30 days on new accounts |
+| **[AWS Resource Access Manager](https://aws.amazon.com/ram/)** | Native AWS service to securely share VPC subnets, Transit Gateways & licenses across accounts | **~$2.76 Trillion** (Amazon Market Cap) | Free service (pay only for underlying resources) | 100% Free service (no extra charge for sharing) |
+| **[HashiCorp Consul Multi-Datacenter](https://www.consul.io/)** | Multi-datacenter service discovery, mesh connectivity, & access control | **~$6.4 Billion** (Acquisition Valuation / ~$583M Revenue) | Starts at $0.027/hour per client unit (~$20/mo) | 30-day free trial on HashiCorp Cloud Platform (HCP) |
+| **[Spacelift](https://spacelift.io/)** | Collaborative IaC platform for Terraform, OpenTofu, Pulumi, & CloudFormation | **~$73.6M Raised** (~$4M ARR) | Starter plan from $20,000/year (or custom tier) | Free Tier (up to 2 users, 1 concurrency) & 14-day free trial |
+| **[env0](https://www.env0.com/)** | IaC automation platform providing self-service environments with strict guardrails | **~$60M Raised** (~$5.9M ARR) | Standard plan starting at ~$349/month | Free Tier (250 runs/mo, 30 active envs) & custom enterprise demos |
+| **[Meshcloud](https://meshcloud.io/)** | Enterprise multi-cloud management platform for automated accounts & governance | **~$19.4M ARR** (Private) | Custom enterprise pricing (upon request) | Free custom live demo & proof-of-concept trial upon request |
+| **[Turbot Guardrails](https://turbot.com/)** | Enterprise automated cloud governance, policy enforcement, & resource sharing | Private (~$1.2M ARR sub) | Usage-based starting at $0.05–$0.10/control/month | 14-day free trial for organizations with full onboarding |
+| **[Scalr](https://scalr.com/)** | Flexible Terraform automation platform with drift detection & policy enforcement | Private Startup | Usage-based starting at ~$99/month | Free Tier (up to 50 runs/month) & 7-day free trial |
+
+---
+
+## 🔓 Open-Source GitHub Projects
+
+Curated open-source control planes, IaC orchestrators, and governance engines. Sorted by GitHub Star Count (descending).
+
+| Project 🌟 | Description 📝 | License 📜 | GitHub Stars ⭐️ |
+| :--- | :--- | :--- | :--- |
+| **[OpenTofu](https://github.com/opentofu/opentofu)** | Community-driven, open-source Terraform fork under Linux Foundation | MPL-2.0 | [![OpenTofu Stars](https://img.shields.io/github/stars/opentofu/opentofu?style=social&color=white)](https://github.com/opentofu/opentofu/stargazers) |
+| **[Consul](https://github.com/hashicorp/consul)** | Multi-datacenter service discovery, configuration, and service mesh engine | MPL-2.0 | [![Consul Stars](https://img.shields.io/github/stars/hashicorp/consul?style=social&color=white)](https://github.com/hashicorp/consul/stargazers) |
+| **[Pulumi](https://github.com/pulumi/pulumi)** | Infrastructure as Code using real programming languages (TypeScript, Python, Go) | Apache-2.0 | [![Pulumi Stars](https://img.shields.io/github/stars/pulumi/pulumi?style=social&color=white)](https://github.com/pulumi/pulumi/stargazers) |
+| **[Open Policy Agent (OPA)](https://github.com/open-policy-agent/opa)** | General-purpose policy engine for unified cross-account & k8s policy enforcement | Apache-2.0 | [![OPA Stars](https://img.shields.io/github/stars/open-policy-agent/opa?style=social&color=white)](https://github.com/open-policy-agent/opa/stargazers) |
+| **[Crossplane](https://github.com/crossplane/crossplane)** | Kubernetes-native control plane to compose and manage multi-cloud resources | Apache-2.0 | [![Crossplane Stars](https://img.shields.io/github/stars/crossplane/crossplane?style=social&color=white)](https://github.com/crossplane/crossplane/stargazers) |
+| **[Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian)** | Rules engine for cloud security, compliance, and multi-account cost governance | Apache-2.0 | [![Cloud Custodian Stars](https://img.shields.io/github/stars/cloud-custodian/cloud-custodian?style=social&color=white)](https://github.com/cloud-custodian/cloud-custodian/stargazers) |
+| **[Terragrunt](https://github.com/gruntwork-io/terragrunt)** | DRY Terraform wrapper to orchestrate configurations across accounts & environments | MIT | [![Terragrunt Stars](https://img.shields.io/github/stars/gruntwork-io/terragrunt?style=social&color=white)](https://github.com/gruntwork-io/terragrunt/stargazers) |
+| **[Atlantis](https://github.com/runatlantis/atlantis)** | Terraform pull request automation tool for GitOps and team collaboration | Apache-2.0 | [![Atlantis Stars](https://img.shields.io/github/stars/runatlantis/atlantis?style=social&color=white)](https://github.com/runatlantis/atlantis/stargazers) |
+| **[Kyverno](https://github.com/kyverno/kyverno)** | Kubernetes-native policy management engine for validation, mutation, & generation | Apache-2.0 | [![Kyverno Stars](https://img.shields.io/github/stars/kyverno/kyverno?style=social&color=white)](https://github.com/kyverno/kyverno/stargazers) |
+| **[Steampipe](https://github.com/turbot/steampipe)** | Zero-ETL engine to query multi-account cloud APIs with SQL | AGPL-3.0 | [![Steampipe Stars](https://img.shields.io/github/stars/turbot/steampipe?style=social&color=white)](https://github.com/turbot/steampipe/stargazers) |
+| **[CloudQuery](https://github.com/cloudquery/cloudquery)** | High-performance open-source cloud asset inventory and ELT platform | MPL-2.0 | [![CloudQuery Stars](https://img.shields.io/github/stars/cloudquery/cloudquery?style=social&color=white)](https://github.com/cloudquery/cloudquery/stargazers) |
+| **[Digger](https://github.com/diggerhq/digger)** | Open-source GitOps tool for Terraform in existing CI/CD pipelines | MIT | [![Digger Stars](https://img.shields.io/github/stars/diggerhq/digger?style=social&color=white)](https://github.com/diggerhq/digger/stargazers) |
+| **[Gatekeeper](https://github.com/open-policy-agent/gatekeeper)** | OPA-based admission controller for policy enforcement in Kubernetes clusters | Apache-2.0 | [![Gatekeeper Stars](https://img.shields.io/github/stars/open-policy-agent/gatekeeper?style=social&color=white)](https://github.com/open-policy-agent/gatekeeper/stargazers) |
+| **[AWS Controllers for Kubernetes (ACK)](https://github.com/aws-controllers-kustomize/ack)** | AWS-native Kubernetes controllers to manage AWS resources across accounts | Apache-2.0 | [![ACK Stars](https://img.shields.io/github/stars/aws-controllers-kustomize/ack?style=social&color=white)](https://github.com/aws-controllers-kustomize/ack/stargazers) |
+| **[Azure Service Operator](https://github.com/Azure/azure-service-operator)** | Azure-native Kubernetes operator to provision Azure resources from Kubernetes | MIT | [![Azure Service Operator Stars](https://img.shields.io/github/stars/Azure/azure-service-operator?style=social&color=white)](https://github.com/Azure/azure-service-operator/stargazers) |
+| **[Terramate](https://github.com/terramate-io/terramate)** | Stacks, code generation, and change detection for Terraform & OpenTofu | MPL-2.0 | [![Terramate Stars](https://img.shields.io/github/stars/terramate-io/terramate?style=social&color=white)](https://github.com/terramate-io/terramate/stargazers) |
+| **[GCP Config Connector](https://github.com/GoogleCloudPlatform/k8s-config-connector)** | Google Cloud Kubernetes add-on for declarative GCP resource management | Apache-2.0 | [![Config Connector Stars](https://img.shields.io/github/stars/GoogleCloudPlatform/k8s-config-connector?style=social&color=white)](https://github.com/GoogleCloudPlatform/k8s-config-connector/stargazers) |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are highly welcome! 💖 Follow these quick steps:
+
+1. Fork this repository 🍴
+2. Create your feature branch (`git checkout -b feature/awesome-addition`)
+3. Add your entry to `README.md` following the tabular format 📝
+4. Commit your changes (`git commit -m 'Add new multi-account sharing tool'`) 
+5. Push to the branch (`git push origin feature/awesome-addition`) 🚀
+6. Open a Pull Request! 🎉
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Multi-Account-Resource-Sharing&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Multi-Account-Resource-Sharing&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Community
+
+If you find this repository useful, please consider giving it a star ⭐️, sharing it with colleagues, or sponsoring the project!
+
+- ⭐️ **Star & Share**: Click the star button at the top right to show support!
+- 💬 **Join Discord**: Connect with cloud engineers on [Discord](https://discord.gg/jc4xtF58Ve).
+- ☕ **Buy Me a Coffee**: Sponsor the maintainer on [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## ⚠️ Disclaimer
+
+- This is a community-curated awesome list intended for informational purposes.
+- Cross-account access requires careful IAM design and regular security auditing.
+- Verify license compliance and security posture prior to deploying tools in production environments.
