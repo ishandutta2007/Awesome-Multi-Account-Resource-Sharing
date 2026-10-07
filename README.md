@@ -50,9 +50,9 @@ Below is a tabular overview of top commercial SaaS platforms providing multi-acc
 
 ## 🔓 Open-Source GitHub Projects
 
-Curated open-source control planes, IaC orchestrators, and governance engines. Sorted by GitHub Star Count (descending).
+Curated open-source control planes, IaC orchestrators, and governance engines. Sorted by GitHub Stars_Count (descending).
 
-| Project 🌟 | Description 📝 | License 📜 | GitHub Stars ⭐️ |
+| Project 🌟 | Description 📝 | License 📜 | GitHub_Stars ⭐️ |
 | :--- | :--- | :--- | :--- |
 | **[OpenTofu](https://github.com/opentofu/opentofu)** | Community-driven, open-source Terraform fork under Linux Foundation | MPL-2.0 | [![OpenTofu Stars](https://img.shields.io/github/stars/opentofu/opentofu?style=social&color=white)](https://github.com/opentofu/opentofu/stargazers) |
 | **[Consul](https://github.com/hashicorp/consul)** | Multi-datacenter service discovery, configuration, and service mesh engine | MPL-2.0 | [![Consul Stars](https://img.shields.io/github/stars/hashicorp/consul?style=social&color=white)](https://github.com/hashicorp/consul/stargazers) |
